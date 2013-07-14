@@ -84,3 +84,16 @@ noscript {
 .incorrect {
     color: #ee5f5b
 }
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    .contact {
+        display: inline-block;
+        height: 48px;
+        width: 48px;
+    }
+}
