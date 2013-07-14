@@ -1,0 +1,33 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import 'sass-bootstrap/lib/bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Denk+One);
+
+body {
+    background-color: #174545;
+}
+
+.container {
+    font-family: 'Denk One', sans-serif;
+    font-size: 42px;
+    width: 650px;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    color: #fff;
+    line-height: 48px;
+}
+
+.doug {
+    margin-bottom: 50px;
+}
+
+.animal {
+    color: yellow;
+}
+
+.buttons {
+    margin-top: 50px
+}
