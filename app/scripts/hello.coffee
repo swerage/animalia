@@ -3,8 +3,11 @@ $( document ).ready ->
     asked   = []
     current = {}
     round   = 0
+    locked  = false
 
     $('.btn', '.buttons').click ->
+        if locked then return
+
         text = $( this ).text()
 
         if text is current.group
@@ -19,20 +22,38 @@ $( document ).ready ->
         showNextQuestion()
 
     handleCorrectAnswer = ( btn ) ->
+        locked = true
         markSuccess btn
 
         asked.push $('.animal').text()
         round += 1
 
-        if round == 3
+        if round == 10
             return showResults()
         
+        $('.name').clearQueue()
+
         setTimeout ->
             resetButtons()
             resetAnswerSpace()
             showNextQuestion()
         , 1000
-            
+
+    handleIncorrectAnswer = ( btn ) ->
+        locked = true
+
+        $( btn ).addClass 'disabled btn-danger'
+        $( btn ).removeClass 'btn-info'
+        
+        $('.name').css 'color', '#ee5f5b'
+        $('.name').text $( btn ).text()
+
+        if !$(".disc:eq(#{round})").hasClass 'correct'
+            $(".disc:eq(#{round})").addClass 'incorrect'
+
+        clearAnswerSpace 300, ->
+            locked = false
+
     markSuccess = ( btn ) ->
         $( btn ).addClass 'btn-success'
         $( btn ).removeClass 'btn-info'
@@ -42,17 +63,6 @@ $( document ).ready ->
 
         if !$(".disc:eq(#{round})").hasClass 'incorrect'
             $(".disc:eq(#{round})").addClass 'correct'
-
-    handleIncorrectAnswer = ( btn ) ->
-        $( btn ).addClass 'disabled btn-danger'
-        $( btn ).removeClass 'btn-info'
-        
-        $('.name').css 'color', '#ee5f5b'
-        $('.name').text $( btn ).text()
-
-        $(".disc:eq(#{round})").addClass 'incorrect'
-
-        clearAnswerSpace 300
 
     resetButtons = ->
         $('.btn', '.buttons').removeClass 'btn-warning btn-success disabled'
@@ -66,7 +76,7 @@ $( document ).ready ->
         $('.disc').removeClass 'correct incorrect'
 
     clearAnswerSpace = ( outDuration, callback ) ->
-        $('.name').delay( 1000 ).fadeOut outDuration, ->
+        $('.name').clearQueue().delay( 1000 ).fadeOut outDuration, ->
             resetAnswerSpace()
             $( this ).fadeIn 500, ->
                 callback() if callback
@@ -100,6 +110,8 @@ $( document ).ready ->
         $('.btn', '.buttons').each ( i ) ->
             $( this ).text possibleAnswers[ i ]
 
+        locked = false
+
     showResults = ->
         correctAnswers = $('.disc.correct').length
         message        = animale.messages.getMessageFor correctAnswers
@@ -116,6 +128,7 @@ $( document ).ready ->
         asked   = []
         current = {}
         round   = 0
+        locked  = false
 
         resetButtons()
         resetAnswerSpace()
