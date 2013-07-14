@@ -8,11 +8,53 @@ body {
     background-color: #174545;
 }
 
+header {
+    width: 650px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    margin-top: 75px;
+}
+
+noscript {
+    width: 650px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+    display: block;
+}
+
+.game {
+    display: none;
+}
+
+.menu {
+    display: none;
+    margin-top: 40px;
+
+    button {
+        width: 150px;
+    }
+}
+
+.final-score {
+    display: none;
+
+    p {
+        margin-top: 10px
+    }
+
+    button {
+        margin-top: 20px;
+    }
+}
+
 .container {
     font-family: 'Denk One', sans-serif;
     font-size: 42px;
     width: 650px;
-    margin-top: 75px;
     margin-left: auto;
     margin-right:auto;
     text-align: center;
@@ -20,8 +62,10 @@ body {
     line-height: 48px;
 }
 
-.doug {
-    margin-bottom: 50px;
+.score {
+    margin-bottom: 30px;
+    font-size: 14px;
+    letter-spacing: 10px;
 }
 
 .animal {
@@ -30,4 +74,12 @@ body {
 
 .buttons {
     margin-top: 50px
+}
+
+.correct {
+    color: #62c462
+}
+
+.incorrect {
+    color: #ee5f5b
 }

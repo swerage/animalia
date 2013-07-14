@@ -16,20 +16,54 @@
         <!-- endbuild -->
     </head>
     <body>
-        <div class="container">
-            <img class="doug" src="images/doug.png">
+        <section>
+            <header>
+                <img class="doug" src="images/doug.png" title="Take your stinkin' paws off me you damn dirty ape!">
+            </header>
 
-            <div>
-                A group of <span class="animal"></span> can be called <span class="name">_____</span>
+            <noscript>
+                <p>Hello. It seems you have javascript turned off. This site won't work at all without javascript. Unless you enjoy looking at doug 
+                here. In that case go right ahead. Enjoy yourself! Just don't hover him with your cursor. He hates that.</p>
+                <p>Have a nice day!</p>
+            </noscript>
+            
+            <div class="container menu">
+                <button class="btn btn-large btn-success play" type="button">Play</button>
             </div>
             
-            <div class="buttons">
-                <button class="btn btn-large btn-info" type="button">a pace</button>
-                <button class="btn btn-large btn-info" type="button">a colony</button>
-                <button class="btn btn-large btn-info" type="button">a sute</button>
-                <button class="btn btn-large btn-info" type="button">an army</button>
+            <div class="container game">
+                <div class="score">
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span>
+                </div>
+
+                <div>
+                    A group of <span class="animal"></span> can be called <span class="name">_____</span>
+                </div>
+                
+                <div class="buttons">
+                    <button class="btn btn-large btn-info" type="button">a pace</button>
+                    <button class="btn btn-large btn-info" type="button">a colony</button>
+                    <button class="btn btn-large btn-info" type="button">a sute</button>
+                    <button class="btn btn-large btn-info" type="button">an army</button>
+                </div>
             </div>
-        </div>
+
+            <div class="container final-score">
+                <p>You scored <span class="total"></span>. <span class="message"></span></p>
+                <div>
+                    <button class="btn btn-large btn-success play" type="button">Play again</button>
+                </div>
+            </div>
+        </section>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -50,6 +84,7 @@
 
         <!-- build:js(.tmp) scripts/coffee.js -->
         <script src="scripts/animals.js"></script>
+        <script src="scripts/messages.js"></script>
         <script src="scripts/hello.js"></script>
         <!-- endbuild -->
 
