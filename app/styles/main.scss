@@ -4,20 +4,23 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import 'sass-bootstrap/lib/bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Denk+One);
 
-body {
+$break-small: 320px;
+$content-width: 1280px;
+
+html, body {
     background-color: #174545;
+    height: 100%
 }
 
 header {
-    width: 1280px;
+    width: $content-width;
     margin-left: auto;
     margin-right:auto;
     text-align: center;
-    margin-top: 75px;
 }
 
 noscript {
-    width: 1280px;
+    width: $content-width;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -26,10 +29,14 @@ noscript {
     display: block;
 }
 
+.main {
+    padding-top: 75px;
+}
+
 .container {
     font-family: 'Denk One', sans-serif;
     font-size: 42px;
-    width: 1280px;
+    width: $content-width;
     margin-left: auto;
     margin-right:auto;
     text-align: center;
@@ -39,6 +46,15 @@ noscript {
 
 .game {
     display: none;
+
+    .question {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .buttons {
+        margin-top: 50px;
+    }
 }
 
 .menu {
@@ -73,10 +89,6 @@ noscript {
     color: yellow;
 }
 
-.buttons {
-    margin-top: 50px
-}
-
 .correct {
     color: #62c462
 }
@@ -86,9 +98,9 @@ noscript {
 }
 
 .bottom {
+    width: 100%;
     position: absolute;
     bottom: 0;
-    width: 100%;
     text-align: center;
 
     .contact {

@@ -11,13 +11,14 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" media="(max-width: 320px)" href="styles/phone.css" />
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
-        <a href="https://github.com/swerage/animalia.git"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
-        <section>
+        <a class="github-ribbon" href="https://github.com/swerage/animalia.git"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+        <section class="main">
             <header>
                 <img class="doug" src="images/doug.png" title="Take your stinkin' paws off me you damn dirty ape!">
             </header>
@@ -34,7 +35,7 @@
             
             <div class="container game">
                 <div class="score">
-                    <span class="disc">&#x25C9;</span> 
+                    <span class="disc">&#x25C9;</span>
                     <span class="disc">&#x25C9;</span> 
                     <span class="disc">&#x25C9;</span> 
                     <span class="disc">&#x25C9;</span> 
@@ -46,7 +47,7 @@
                     <span class="disc">&#x25C9;</span>
                 </div>
 
-                <div>
+                <div class="question">
                     A group of <span class="animal"></span> can be called <span class="name">_____</span>
                 </div>
                 
@@ -64,18 +65,19 @@
                     <button class="btn btn-large btn-success play" type="button">Play again</button>
                 </div>
             </div>
+
+            <div class="bottom">
+                <a class="contact github" title="Check me out on github" href="https://github.com/swerage/" target="_blank">
+                    <img src="images/github_small.png" />
+                </a>
+                <a class="contact twitter" title="Shoot me a tweet" href="https://twitter.com/chriscarragher" target="_blank">
+                    <img src="images/twitter_small.png" />
+                </a>
+                <a class="contact linknedin" title="Get into some gangsta shit" href="http://www.linkedin.com/pub/christopher-ling-carragher/24/957/46a" target="_blank">
+                    <img src="images/linkedin_small.png" />
+                </a>
+            </div>
         </section>
-        <div class="bottom">
-            <a class="contact github" title="Check me out on github" href="https://github.com/swerage/" target="_blank">
-                <img src="images/github_small.png" />
-            </a>
-            <a class="contact twitter" title="Shoot me a tweet" href="https://twitter.com/chriscarragher" target="_blank">
-                <img src="images/twitter_small.png" />
-            </a>
-            <a class="contact linknedin" title="Get into some gangsta shit" href="http://www.linkedin.com/pub/christopher-ling-carragher/24/957/46a" target="_blank">
-                <img src="images/linkedin_small.png" />
-            </a>
-        </div>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
