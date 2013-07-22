@@ -1,57 +1,57 @@
-$content-width: 320px;
-
-header {
-    width: 100%;
-
-    .doug {
-        width: 50px;
-    }
-}
-
-.github-ribbon {
-    display: none;
-}
-
-.main {
-    padding-top: 15px;
-}
-
-.container {
-    width: 100%;
-    font-size: 32px;
-}
-
-.game {
-    height: 450px;
-
-    .question {
-        margin-top: 20px;
-    }
-
-    .buttons {
-        position: absolute;
-        top: 240px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 20px;
-    }
-
-    .btn {
+@media screen and (max-width: 320px) {
+    header {
         width: 100%;
+
+        .doug {
+            width: 50px;
+        }
     }
-}
 
-.menu {
-    height: 350px;
-}
+    .github-ribbon {
+        display: none;
+    }
 
-.final-score {
-    width: 290px;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 300px;
-}
+    .main {
+        padding-top: 15px;
+    }
 
-.score, .bottom {
-    display: none;
+    .container {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .game {
+        height: 450px;
+
+        .question {
+            margin-top: 20px;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 240px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .menu {
+        height: 350px;
+    }
+
+    .final-score {
+        width: 290px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 300px;
+    }
+
+    .score, .bottom {
+        display: none;
+    }
 }
